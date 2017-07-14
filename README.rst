@@ -1,6 +1,7 @@
 ==============================
 Elsmart workorder microservice
 ==============================
+[![Build Status](https://travis-ci.org/sesam-community/elsmart.svg?branch=master)](https://travis-ci.org/sesam-community/elsmart)
 
 A python micro service template for receiving a JSON entity stream from a Sesam service instance and forwarding it
 to a Elsmart workorder endpoint. The return JSON payload is then inspected to generate proper HTTP error codes in case
