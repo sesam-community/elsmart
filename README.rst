@@ -6,6 +6,8 @@ Environment variables which need to be set:
 
 API_ENDPOINT
 
+Set these if you want authentication:
+
 USERNAME
 
 PASSWORD
