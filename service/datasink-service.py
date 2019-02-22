@@ -6,9 +6,9 @@ import sys
 
 app = Flask(__name__)
 
-API_ENDPOINT = os.environ.get("API_ENDPOINT")
-USER = os.environ.get("USER")
-PASSWORD = os.environ.get("PASSWORD")
+API_ENDPOINT = os.environ.get('API_ENDPOINT')
+USER = os.environ.get('USERNAME')
+PSW = os.environ.get('PASSWORD')
 
 def is_2xx_status(response):
     return 200 <= response.status_code < 300
@@ -17,9 +17,11 @@ def is_2xx_status(response):
 @app.route('/receiver', methods=['POST'])
 def receiver():
     # get entities from request and write each of them to a file
-
     headers = {"content-type": "application/json"}
-    r = requests.post(API_ENDPOINT, data=request.data, headers=headers, auth=(USER, PASSWORD))
+    if User != None and PSW != None:
+        r = requests.post(API_ENDPOINT, data=request.data, headers=headers, auth=(USER, PSW))
+    else:
+        r = requests.post(API_ENDPOINT, data=request.data, headers=headers)
 
     if not is_2xx_status(r):
         return Response("The endpoint '%s' returned a non-OK error code '%s' (%s)! "
