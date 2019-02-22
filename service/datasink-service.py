@@ -7,8 +7,8 @@ import sys
 app = Flask(__name__)
 
 API_ENDPOINT = os.environ.get('API_ENDPOINT')
-USER = os.environ.get('USERNAME')
-PSW = os.environ.get('PASSWORD')
+USERNAME = os.environ.get('USERNAME')
+PASSWORD = os.environ.get('PASSWORD')
 
 def is_2xx_status(response):
     return 200 <= response.status_code < 300
@@ -18,8 +18,8 @@ def is_2xx_status(response):
 def receiver():
     # get entities from request and write each of them to a file
     headers = {"content-type": "application/json"}
-    if User != None and PSW != None:
-        r = requests.post(API_ENDPOINT, data=request.data, headers=headers, auth=(USER, PSW))
+    if USERNAME != None and PASSWORD != None:
+        r = requests.post(API_ENDPOINT, data=request.data, headers=headers, auth=(USERNAME, PASSWORD))
     else:
         r = requests.post(API_ENDPOINT, data=request.data, headers=headers)
 
