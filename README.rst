@@ -3,9 +3,13 @@ Elsmart workorder microservice
 ==============================
 
 Environment variables which need to be set:
+
 API_ENDPOINT
+
 USER
+
 PASSWORD
+
 
 .. image:: https://travis-ci.org/sesam-community/elsmart.svg?branch=master
     :target: https://travis-ci.org/sesam-community/elsmart
