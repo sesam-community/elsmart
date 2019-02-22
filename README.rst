@@ -1,9 +1,21 @@
 ==============================
 Elsmart workorder microservice
 ==============================
+
+Environment variables which need to be set:
+
+API_ENDPOINT
+
+Set these if you want authentication:
+
+USERNAME
+
+PASSWORD
+
+
 .. image:: https://travis-ci.org/sesam-community/elsmart.svg?branch=master
     :target: https://travis-ci.org/sesam-community/elsmart
-    
+
 A python micro service template for receiving a JSON entity stream from a Sesam service instance and forwarding it
 to a Elsmart workorder endpoint. The return JSON payload is then inspected to generate proper HTTP error codes in case
 something has gone wrong.
